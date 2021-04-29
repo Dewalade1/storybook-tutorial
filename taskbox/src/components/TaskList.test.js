@@ -12,8 +12,12 @@ it('renders pinned tasks at the start of the list', () => {
     ReactDOM.render(<WithPinnedTasks {...WithPinnedTasks.args} />, div);
 
     // We expect the task titled "Task 6 (pinned)" to be rendered first, not at the end
-    const lastTaskInput = div.querySelector('.list-item:nth-child(1) input[value="Task 6 (pinned)"]');
-    expect(lastTaskInput).not.toBe(null);
+    const lastTaskInput1 = div.querySelector('.list-item:nth-child(1) input[value="Task 4 (pinned)"]');
+    const lastTaskInput2 = div.querySelector('.list-item:nth-child(2) input[value="Task 5 (pinned)"]');
+    const lastTaskInput3 = div.querySelector('.list-item:nth-child(3) input[value="Task 6 (pinned)"]')
+    expect(lastTaskInput1).not.toBe(null);
+    expect(lastTaskInput2).not.toBe(null);
+    expect(lastTaskInput3).not.toBe(null);
 
     ReactDOM.unmountComponentAtNode(div);
 });
