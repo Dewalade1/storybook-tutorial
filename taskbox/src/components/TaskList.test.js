@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import '@testing-library/jest-dom/extend-expect';
 
-import { WithPinnedTasks } from './Task.stories'; // Our story imported here
+import { WithPinnedTasks } from './TaskList.stories'; // Our story imported here
 
 it('renders pinned tasks at the start of the list', () => {
     const div = document.createElement('div');
